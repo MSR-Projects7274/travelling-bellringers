@@ -21,3 +21,7 @@ h1 {
 #navbar {
     background-color: green !important;
 }
+
+#navbar .logo {
+    width: 70px;
+}
