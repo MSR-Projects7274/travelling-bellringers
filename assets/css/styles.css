@@ -25,3 +25,11 @@ h1 {
 #navbar .logo {
     width: 70px;
 }
+
+
+
+
+/*Footer CSS*/
+#footer {
+    background-color: green !important;
+}
