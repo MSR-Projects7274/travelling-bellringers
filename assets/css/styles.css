@@ -34,7 +34,7 @@ h1 {
     color: var(--primary-text) !important;
 }
 
-/* Prevent child backgrounds from overriding the navbar bg */
+/* This prevents the children from overriding the navbar background */
 #navbar * {
     background-color: transparent !important;
 }
@@ -56,3 +56,8 @@ body {
     background-color: black;
     color: white;
 }
+
+.center-this {
+    padding: 250px;
+}
+
