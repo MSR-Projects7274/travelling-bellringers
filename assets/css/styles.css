@@ -6,6 +6,12 @@
 :root {
     --primary-font: "Merriweather", sans-serif;
     --secondary-font: "Montserrat", sans-serif;
+
+    --primary-bg: black;
+    --primary-text: white;
+
+    --navbar-bg: green !important;
+    --footer-bg: green;
 }
 
 body {
@@ -17,19 +23,36 @@ h1 {
 }
 
 /*Navbar CSS*/
-
 #navbar {
-    background-color: green !important;
+    background-color: var(--navbar-bg) !important;
+    color: var(--primary-text) !important;
+}
+
+/* Force all text inside navbar to be white */
+#navbar, 
+#navbar * {
+    color: var(--primary-text) !important;
+}
+
+/* Prevent child backgrounds from overriding the navbar bg */
+#navbar * {
+    background-color: transparent !important;
 }
 
 #navbar .logo {
     width: 70px;
 }
 
-
-
-
 /*Footer CSS*/
 #footer {
-    background-color: green !important;
+    background-color: var(--footer-bg) !important;
+}
+
+
+
+/*Global Styles*/
+
+body {
+    background-color: black;
+    color: white;
 }
