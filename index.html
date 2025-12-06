@@ -41,62 +41,138 @@
   </head>
 
   <body class="d-flex flex-column min-vh-100">
-
     <!--Navigation Below Here-->
-<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="assets/images/bell_PNG53577.png" alt="The Travelling Bellringers Logo" class="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="assets/images/bell_PNG53577.png"
+            alt="The Travelling Bellringers Logo"
+            class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-         </li>
-            <li class="nav-item">
-          <a class="nav-link" href="showcase.html">Showcase</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-          <a class="nav-link" href="booking.html">Book Us</a>
+              <a class="nav-link" href="showcase.html">Showcase</a>
             </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="booking.html">Book Us</a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<main>
-    <section id="main-header">
+    <main>
+      <!--Main header with a carousel underneath with text on the images -->
+      <section id="header">
         <div class="text-center">
-            <h1>The Travelling Bellringers</h1>
-            <p>Test Paragraph</p>
+          <h1>The Silver Peal Ringers</h1>
+          <div id="carousel" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+           </div>
+          <section class="row justify-content-center container-fluid">
+            <div class="my-4 text-center"></div>
+            <h2>Who are We?</h2>
+            <p>
+            The Silver Peal Ringers are a dedicated ensemble of church
+            bellringers who journey across the country sharing the rich heritage
+            of English change ringing. Blending tradition with showmanship, they
+            bring to life the resonant music of handbells and tower bells in
+            churches, festivals, and community events nationwide. With
+            precision, teamwork, and a deep love for their craft, the group
+            transforms each performance into a vibrant celebration of sound,
+            history, and fellowship. <br>
+            <br>
+            Founded in 1978 by a small circle of tower ringers from three
+            neighbouring parishes, the group began as a modest effort to
+            rekindle interest in bellringing among younger generations. Their
+            first performances were informal—community fêtes, church
+            anniversaries, and charity fundraisers—but their warm camaraderie
+            and crisp, musical ringing soon earned them invitations across the
+            country. <br>
+            <br>
+            By the early 1990s, the ensemble had developed a full touring
+            repertoire featuring handbell arrangements, ringing demonstrations,
+            and educational workshops. As their reputation grew, so did their
+            involvement in national commemorations. In 2018, The Silver Peal
+            Ringers were honoured to take part in special peals and half-muffled
+            ringing to mark the Centenary of the End of World War I, joining
+            bell towers nationwide in paying tribute to the fallen. Two years
+            later, in 2020, they again took to the road—where permitted—to help
+            commemorate the 75th Anniversary of the End of World War II,
+            offering uplifting performances that celebrated peace and remembered
+            sacrifice. <br>
+            <br>
+            Over the decades, they have visited hundreds of towers across the
+            UK, forging friendships with local bands, supporting restoration
+            projects, and helping keep alive methods that have echoed through
+            English history for centuries. Today, The Silver Peal Ringers remain
+            committed to their founding mission: to inspire, to teach, and to
+            let the timeless art of bellringing resonate wherever their travels
+            take them.
+            </p>
+          </section>
         </div>
-    </section>
-  <!--Bootstrap JS-->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+      </section>
+      <!--Bootstrap JS-->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+      ></script>
 
-  <!--FontAwesome Kit-->
-  <script
-    src="https://kit.fontawesome.com/752a3e352b.js"
-    crossorigin="anonymous"
-  ></script>
+      <!--FontAwesome Kit-->
+      <script
+        src="https://kit.fontawesome.com/752a3e352b.js"
+        crossorigin="anonymous"
+      ></script>
+    </main>
 
-</main>
-
-<!--Footer Goes Below Here-->
-<footer id="footer" class="mt-auto">
-<div class="container">
-    <div class="col-12"> Inspirational Message Plus Location Section</div>
-    <div class="row justify-content-center col-4">Inspirational message Goes Here</div>
-    <div class="row justify-content-center col-4">Our Location</div>
-    <div class="row justify-content-center col-4">Main Contact</div>
-
-</div>
-</footer>
-</body>
-
-
+    <!--Footer Goes Below Here-->
+    <footer id="footer" class="mt-auto">
+      <div class="container">
+        <div class="col-12">Inspirational Message Plus Location Section</div>
+        <div class="row justify-content-center col-4">
+          Inspirational message Goes Here
+        </div>
+        <div class="row justify-content-center col-4">Our Location</div>
+        <div class="row justify-content-center col-4">Main Contact</div>
+      </div>
+    </footer>
+  </body>
 </html>
