@@ -68,3 +68,7 @@ body {
 #showcase {
     padding: 20px;
 }
+
+section .header .carousel {
+    max-width: 20%;
+}
