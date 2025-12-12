@@ -49,8 +49,11 @@ h1 {
 }
 
 #showcase-photos {
-    column-count: 3;
+    column-count: 4;
     column-gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 @media (max-width: 900px) {
@@ -65,12 +68,49 @@ h1 {
     }
 }
 
+/* All images */
 #showcase-photos img {
     width: 100%;
     height: auto;
     display: block;
     margin-bottom: 0;
+    object-fit: contain;
 }
+
+/* Tall images scale proportionally to column width */
+#showcase-photos img.tall-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Adjust tall image max-height based on column width */
+@media (min-width: 1200px) {
+    #showcase-photos img.tall-image {
+        max-height: calc(100vw / 4);
+    }
+}
+
+/* Laptop: 1024px approx, scale down tall image */
+@media (min-width: 900px) and (max-width: 1199px) {
+    #showcase-photos img.tall-image {
+        max-height: 255px;
+    }
+}
+
+@media (max-width: 900px) {
+    #showcase-photos img.tall-image {
+        max-height: calc(100vw / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    #showcase-photos img.tall-image {
+        max-height: calc(100vw / 1);
+    }
+}
+
+
 
 
 
