@@ -48,6 +48,32 @@ h1 {
     background-color: var(--footer-bg) !important;
 }
 
+#showcase-photos {
+    column-count: 3;
+    column-gap: 0;
+}
+
+@media (max-width: 900px) {
+    #showcase-photos {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    #showcase-photos {
+        column-count: 1;
+    }
+}
+
+#showcase-photos img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0;
+}
+
+
+
 
 
 /*Global Styles*/
