@@ -343,3 +343,27 @@ section .header .carousel {
     font-size: 1.25rem;
   }
 }
+
+/* Book Now Button Styling */
+.btn-book-now {
+  background-color: var(--site-footer-bg) !important;
+  color: var(--primary-text) !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: none;
+}
+
+.btn-book-now:hover {
+  background-color: var(--site-footer-bg) !important;
+  color: var(--primary-text) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+
