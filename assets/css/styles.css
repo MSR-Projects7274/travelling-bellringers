@@ -9,7 +9,7 @@
     --primary-bg: black;
     --primary-text: white;
 
-/* Shared brand colour */
+    /* Shared brand colour */
     --brand-green: green;
 
     --navbar-bg: var(--brand-green);
@@ -115,7 +115,7 @@ h1 {
     border: 0;
 }
 
-/*This makes the showcase photos into columns*/
+/* Showcase photos grid */
 #showcase-photos {
     column-count: 4;
     column-gap: 0;
@@ -130,7 +130,6 @@ h1 {
     padding-bottom: 0;
 }
 
-
 @media (max-width: 900px) {
     #showcase-photos {
         column-count: 2;
@@ -143,15 +142,53 @@ h1 {
     }
 }
 
-/* All Images */
-#showcase-photos img {
+/* Photo hover effect with caption */
+.photo-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.photo-container img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    cursor: pointer;
 }
 
-/* Tall Images */
+.photo-container img.tall-image {
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.photo-container img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Caption Styling with slide-up effect */
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease 0.15s, transform 0.35s ease 0.15s; /* delay for staggered effect */
+    text-align: center;
+}
+
+.photo-container:hover .photo-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tall images max height */
 #showcase-photos img.tall-image {
     object-fit: cover;
 }
@@ -196,4 +233,113 @@ h1 {
 
 section .header .carousel {
     max-width: 20%;
+}
+
+/*Service Cards */
+
+/*Card Background Matches Header/Footer*/
+.service-card {
+  background-color: var(--site-footer-bg);
+  color: var(--primary-text);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+/* Icon Styling with Swing Animation */
+.service-icon {
+  color: var(--primary-text);
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.service-card:hover .service-icon {
+  transform: rotate(-15deg) scale(1.2);
+  animation: swing 0.5s ease-in-out 1;
+  color: var(--primary-text);
+}
+
+@keyframes swing {
+  0% { transform: rotate(-15deg) scale(1.2); }
+  50% { transform: rotate(15deg) scale(1.2); }
+  100% { transform: rotate(0deg) scale(1.2); }
+}
+
+/* Responsive Icon Scaling */
+@media (max-width: 768px) {
+  .service-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-icon {
+    font-size: 2rem;
+  }
+}
+
+.services-note {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--primary-text);
+}
+
+/* Footer Icons*/
+/* Footer Icon Base: continuous gentle swing */
+.footer-icon.bell-icon {
+  display: inline-block;
+  color: var(--site-accent);
+  cursor: pointer;
+  animation: gentle-swing 4s ease-in-out infinite alternate;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover: stronger swing + scale */
+.footer-icon.bell-icon:hover {
+  transform: rotate(-15deg) scale(1.2);
+  animation: swing 0.5s ease-in-out 1 forwards;
+}
+
+/* Staggered continuous swing for each icon */
+.site-footer h5 .bell-icon:nth-child(1) {
+  animation-delay: 0s;
+}
+.site-footer h5 .bell-icon:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.site-footer h5 .bell-icon:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Gentle continuous swing keyframes */
+@keyframes gentle-swing {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+/* Hover swing keyframes (strong swing) */
+@keyframes swing {
+  0% { transform: rotate(-15deg) scale(1.2); }
+  50% { transform: rotate(15deg) scale(1.2); }
+  100% { transform: rotate(0deg) scale(1.2); }
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .footer-icon.bell-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-icon.bell-icon {
+    font-size: 1.25rem;
+  }
 }
