@@ -94,7 +94,7 @@
                         </div>
                         <div class="col-12 col-lg-4 mb-3">
                             <label for="phone" class="form-label">Phone number</label>
-                            <input class="form-control" id="phone" name="phone" type="tel" required>
+                            <input class="form-control" id="phone" name="phone" type="tel" pattern="(\D*\d){9,15}\D*" title="Please enter a Phone Number" required>
                         </div>
                         <div class="col-12 mb-3">
                             <label for="message" class="form-label">Please fill in the event description, any special dedications or requests or questions you may have</label>
